@@ -1,0 +1,16 @@
+mixin nav_menu(data)
+	- gl_mod = data.gl_mod || ''
+	ul(class=`${data.gl_class}__list ${gl_mod}`)
+		each item in data.items
+			- url = item.url || '#'
+			if item.active
+				li(class= `${data.gl_class}__item active_mod`)
+					a(href= url class= `${data.gl_class}__link`)= item.title
+					if item.submenu
+						ul.submenu
+							each submenu in item.submenu
+								li.submenu__item
+									a.submenu__link(href="#")= submenu
+			else
+				li(class= `${data.gl_class}__item`)
+					a(href= url class= `${data.gl_class}__link`)= item.title

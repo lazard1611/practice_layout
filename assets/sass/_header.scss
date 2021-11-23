@@ -1,0 +1,105 @@
+//------------------------------------------------------------layout
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: var(--sidebar-size);
+
+	font-size: 1rem;
+
+	will-change: transform;
+
+	@include z-index(header);
+
+	@include bp($point_2, min) {
+		padding: 6.2rem 8rem;
+	}
+}
+
+//------------------------------------------------------------layout###
+
+.header__in {
+
+}
+
+.header__logo {
+	display: block;
+	width: 11rem;
+	margin-bottom: 6rem;
+
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.header__logo_img {
+	@extend %cover_img;
+}
+
+.header_menu__list {
+
+}
+
+.header_menu__item {
+	margin-bottom: 1.6rem;
+}
+
+.header_menu__link {
+	color: $black_2;
+	font-family: $font_2;
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .04rem;
+	line-height: 1.56;
+
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+//---------------------Submenu-------------------
+.submenu {
+	margin-top: 1.6rem;
+}
+
+.submenu__item {
+	margin-bottom: 1.6rem;
+
+	&:nth-child(6n + 6) {
+		position: relative;
+		margin-bottom: 8rem;
+
+		&:after {
+			position: absolute;
+			bottom: -4rem;
+			left: 0;
+
+			display: block;
+			width: 4rem;
+			height: 1px;
+
+			background-color: $gray_2;
+			content: '';
+		}
+	}
+}
+
+.submenu__link {
+	color: $gray_2;
+	font-family: $font_2;
+	font-size: 1.8rem;
+	font-weight: 400;
+	line-height: 1.56;
+
+	&:focus,
+	&:active,
+	&:hover {
+		text-decoration: none;
+	}
+}

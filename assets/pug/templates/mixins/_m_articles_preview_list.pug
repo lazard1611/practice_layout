@@ -1,0 +1,12 @@
+mixin articles_preview(data)
+	.articles_preview_list__item(class= data.item_mod)
+		a.articles_preview_item(href='#')
+			+picture({
+				mod: 'articles_preview_item__img',
+				img: data.img,
+				customClass: 'articles_preview_item__img_in'
+			})
+			.articles_preview_item__content
+				.articles_preview_item__title!= data.title
+				if data.descr
+					.articles_preview_item__descr!= data.descr

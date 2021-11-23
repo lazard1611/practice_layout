@@ -1,0 +1,34 @@
+mixin header
+	header.header
+		.header__in
+			a.header__logo(href='#')
+				img.header__logo_img(src= 'i/logo.svg' alt='Logo')
+			.menu_trigger.menuTrigger
+				span.menu_trigger_decor
+			nav.header_menu_nav
+				+nav_menu({
+					gl_class: 'header_menu',
+					items: [
+						{
+							title: 'Shop',
+							active: true,
+							submenu: [
+								'Home',
+								'Beauty',
+								'Kitchen',
+								'Wellness',
+								'Fashion',
+								'Cocktails',
+								'Organic',
+								'Made in U.S.A.',
+								'Handmade',
+								'Recycled Materials',
+							],
+						},
+
+						{title: 'About'},
+						{title: 'About'},
+						{title: 'FAQ'},
+						{title: 'Blog'},
+					]
+				})

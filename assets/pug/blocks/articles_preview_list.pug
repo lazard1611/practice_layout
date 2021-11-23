@@ -1,0 +1,32 @@
+section.section.articles_preview_list
+	.articles_preview_list
+		-
+			list = [
+				{
+					item_mod: 'width_mod',
+					title: 'Handmade and Durable Items from the Hands of a True Artist',
+					descr: 'The word itself comes from the French and Italian words meaning a skilled craftsperson who makes things by hand. But even more than that, a true artisan puts their heart and soul into the items they create…',
+				},
+				{
+					item_mod: 'width_mod',
+					title: 'Handmade and Durable Items from the Hands of a True Artist',
+					descr: 'The word itself comes from the French and Italian words meaning a skilled craftsperson who makes things by hand. But even more than that, a true artisan puts their heart and soul into the items they create…',
+				},
+				{
+					title: 'Handmade and Durable Items from the Hands of a True Artist',
+				},
+				{
+					title: 'Handmade and Durable Items from the Hands of a True Artist',
+				},
+				{
+					title: 'Handmade and Durable Items from the Hands of a True Artist',
+				}
+			]
+
+		each item, index in list
+			+articles_preview({
+				item_mod: item.item_mod,
+				img: `i/art_${index}`,
+				title: item.title,
+				descr: item.descr,
+			})

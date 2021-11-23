@@ -1,0 +1,49 @@
+//---------------------------------------------sections
+.section {
+	position: relative;
+
+	width: 100%;
+
+	font-size: 1rem;
+
+	&.top_baner_mod {
+		padding: 4rem 6rem 8rem 10rem;
+
+		background: $gray;
+	}
+
+	&.articles_preview_list {
+		padding: 6rem 0 7rem;
+	}
+
+}
+
+//============================================
+.section_in {
+	max-width: $page_width;
+	width: 100%;
+	margin: 0 auto;
+}
+
+//============================================
+
+.section_wrap {
+	@extend %global_flex_block_row_wrap_flex-start_center;
+}
+
+//============================================
+
+.section_col {
+	&.v1_mod {
+
+	}
+}
+
+//============================================
+.section_title {
+	font-size: 4.2rem;
+	font-weight: 300;
+	line-height: 1.52;
+}
+
+//============================================

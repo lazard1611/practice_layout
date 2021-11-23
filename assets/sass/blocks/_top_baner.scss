@@ -1,0 +1,35 @@
+.top_baner__w {
+	@extend %global_flex_block_row_wrap_flex-end_center;
+	margin-bottom: 1rem;
+}
+
+.top_baner__icon {
+	width: 3rem;
+	height: 3rem;
+	margin-right: 4px;
+
+	color: $black;
+}
+
+.top_baner__cart {
+	color: $blue_3;
+	font-family: $font_2;
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: .04rem;
+	line-height: 1.56;
+	text-align: right;
+
+	&:after {
+		counter-increment: top-baner;
+		content: '  ' counter(top-baner) "";
+	}
+}
+
+.top_baner__title {
+	max-width: 71rem;
+
+	font-size: 4.2rem;
+	font-weight: 300;
+	line-height: 1.52;
+}
